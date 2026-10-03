@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Mi carrito | Mascotas Felices</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Revisa los productos que agregaste a tu carrito, ajusta cantidades y consulta el total de tu pedido en Mascotas Felices.">
+    <meta name="author" content="Mascotas Felices">
+
+    <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/templatemo.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap">
+</head>
+
+<body>
+    <a class="mf-skip-link" href="#mf-main">Ir al contenido principal</a>
+
+    <nav class="mf-topbar d-none d-lg-block">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center py-2">
+                <div class="small text-white-50">
+                    <i class="fas fa-envelope me-2"></i>hola@mascotasfelices.com
+                    <span class="mx-3">|</span>
+                    <i class="fas fa-phone me-2"></i>(55) 1234 5678
+                </div>
+                <div class="d-flex gap-3">
+                    <a href="#" class="text-white-50" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-white-50" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-white-50" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    <a href="#" class="text-white-50" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="navbar navbar-expand-lg mf-navbar sticky-top shadow-sm">
+        <div class="container">
+            <a class="mf-logo" href="index.html">
+                <span class="mf-logo-mark"><i class="fas fa-paw"></i></span>
+                Mascotas Felices
+            </a>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mf-nav" aria-controls="mf-nav" aria-expanded="false" aria-label="Abrir menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mf-nav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="shop.html">Tienda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
+                </ul>
+
+                <div class="d-flex align-items-center gap-2 py-3 py-lg-0">
+                    <form action="shop.html" method="get" class="d-lg-none w-100 me-2">
+                        <div class="input-group">
+                            <input type="search" name="q" class="form-control mf-form-control" placeholder="Buscar productos..." aria-label="Buscar productos">
+                            <button class="btn btn-success" type="submit" aria-label="Buscar"><i class="fas fa-search"></i></button>
+                        </div>
+                    </form>
+                    <button class="mf-icon-btn" type="button" data-bs-toggle="modal" data-bs-target="#mf-search" aria-label="Buscar">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <a class="mf-icon-btn" href="cart.html" aria-label="Ver carrito">
+                        <i class="fas fa-cart-arrow-down"></i>
+                        <span class="mf-cart-count" data-mf-cart-count>0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="modal fade" id="mf-search" tabindex="-1" aria-labelledby="mf-search-label" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content border-0" style="border-radius:18px">
+                <div class="modal-header border-0 pb-0">
+                    <h2 class="modal-title h5 fw-bold" id="mf-search-label">Buscar productos</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body mf-modal-search">
+                    <div class="input-group mb-3">
+                        <input type="search" class="form-control mf-form-control" id="mf-search-input" placeholder="Escribe el nombre de un producto...">
+                        <span class="input-group-text bg-success text-white"><i class="fas fa-search"></i></span>
+                    </div>
+                    <div class="mf-search-results" id="mf-search-results"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main id="mf-main">
+        <div class="mf-breadcrumb-bar py-2">
+            <div class="container">
+                <nav aria-label="Ruta de navegacion">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+                        <li class="breadcrumb-item"><a href="shop.html">Tienda</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Mi carrito</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <section class="mf-page-head">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <span class="mf-eyebrow">Pedido</span>
+                        <h1 class="mb-2">Mi carrito</h1>
+                        <p class="text-muted mb-0" id="mf-unidades">0 articulos</p>
+                    </div>
+                    <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
+                        <button type="button" class="btn btn-outline-mf btn-sm" data-mf-vaciar>
+                            <i class="fas fa-trash me-1"></i>Vaciar carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container py-5">
+            <div class="mf-alert-ok mb-4" id="mf-alert-ok">
+                <i class="fas fa-circle-check me-2"></i>Pedido confirmado. Te enviamos el resumen por correo.
+            </div>
+
+            <div class="row">
+                <div class="col-lg-8">
+                    <div id="mf-carrito-vacio" class="mf-empty mb-4" style="display:none">
+                        <i class="fas fa-cart-arrow-down"></i>
+                        <p class="mb-1 fw-bold">Tu carrito esta vacio</p>
+                        <p class="mb-3">Todavia no agregaste productos. Recorre nuestro catalogo para empezar.</p>
+                        <a href="shop.html" class="btn btn-success">Ir a la tienda</a>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="mf-cart-table">
+                            <caption class="visually-hidden">Productos en tu carrito</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Producto</th>
+                                    <th scope="col">Precio</th>
+                                    <th scope="col">Cantidad</th>
+                                    <th scope="col" class="text-end">Subtotal</th>
+                                    <th scope="col"><span class="visually-hidden">Quitar</span></th>
+                                </tr>
+                            </thead>
+                            <tbody id="mf-cart-body"></tbody>
+                            <tbody id="mf-cart-fila-vacia" style="display:none">
+                                <tr>
+                                    <td colspan="5" class="text-center text-muted py-4">
+                                        No hay productos en el carrito.
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <a href="shop.html" class="btn btn-outline-mf mt-3">
+                        <i class="fas fa-arrow-left me-2"></i>Seguir comprando
+                    </a>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="mf-cart-summary" id="mf-carrito-resumen">
+                        <h2 class="h6 fw-bold mb-3">Resumen del pedido</h2>
+
+                        <div class="mf-summary-row">
+                            <span class="text-muted">Subtotal</span>
+                            <span class="fw-bold" id="mf-subtotal">$0.00</span>
+                        </div>
+                        <div class="mf-summary-row">
+                            <span class="text-muted">Envio</span>
+                            <span class="fw-bold" id="mf-envio">$0.00</span>
+                        </div>
+                        <p class="small text-muted" id="mf-envio-pista"></p>
+
+                        <div class="mf-summary-total">
+                            <span>Total</span>
+                            <span id="mf-total">$0.00</span>
+                        </div>
+
+                        <button type="button" class="btn btn-success w-100 btn-lg mt-3" id="mf-finalizar" onclick="MF.Toast('ok','Pedido confirmado. Te enviamos el resumen por correo.');document.getElementById('mf-alert-ok').classList.add('show');MF.carrito.vaciar();">
+                            Finalizar compra
+                        </button>
+
+                        <ul class="list-unstyled small text-muted mt-3 mb-0">
+                            <li class="mb-1"><i class="fas fa-lock me-2 text-success"></i>Pago protegido</li>
+                            <li class="mb-1"><i class="fas fa-truck me-2 text-success"></i>Despacho en 24 horas</li>
+                            <li><i class="fas fa-rotate-left me-2 text-success"></i>Devolucion gratuita por 30 dias</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="mf-footer">
+        <div class="container">
+            <div class="row py-5">
+                <div class="col-md-4 mb-4">
+                    <h2 class="mf-footer-title mb-3">Mascotas Felices</h2>
+                    <p class="small">Tienda de productos para perros y gatos. Seleccionamos cada articulo con el criterio de quien tiene mascotas de verdad.</p>
+                    <ul class="list-unstyled mf-footer-link-list small">
+                        <li><i class="fas fa-location-dot me-2"></i>Av. de los Mascotes 142, Ciudad de Mexico</li>
+                        <li><i class="fas fa-phone me-2"></i><a href="tel:+525512345678">(55) 1234 5678</a></li>
+                        <li><i class="fas fa-envelope me-2"></i><a href="mailto:hola@mascotasfelices.com">hola@mascotasfelices.com</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h2 class="mf-footer-title mb-3">Categorias</h2>
+                    <ul class="list-unstyled mf-footer-link-list">
+                        <li><a class="text-decoration-none" href="shop.html?cat=perros">Perros</a></li>
+                        <li><a class="text-decoration-none" href="shop.html?cat=gatos">Gatos</a></li>
+                        <li><a class="text-decoration-none" href="shop.html?cat=alimentos">Alimentos</a></li>
+                        <li><a class="text-decoration-none" href="shop.html?cat=juguetes">Juguetes</a></li>
+                        <li><a class="text-decoration-none" href="shop.html?cat=accesorios">Accesorios</a></li>
+                        <li><a class="text-decoration-none" href="shop.html?cat=higiene">Higiene</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h2 class="mf-footer-title mb-3">Informacion</h2>
+                    <ul class="list-unstyled mf-footer-link-list">
+                        <li><a class="text-decoration-none" href="about.html">Sobre nosotros</a></li>
+                        <li><a class="text-decoration-none" href="cart.html">Mi carrito</a></li>
+                        <li><a class="text-decoration-none" href="contact.html">Contacto</a></li>
+                        <li><a class="text-decoration-none" href="shop.html?orden=precio-asc">Ofertas</a></li>
+                        <li><a class="text-decoration-none" href="contact.html#mf-form-contacto">Asesoria veterinaria</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row align-items-center pb-4">
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <div class="d-flex gap-2">
+                        <a href="#" class="mf-social" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="mf-social" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="mf-social" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" class="mf-social" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <form class="mf-subscribe d-flex gap-2" onsubmit="event.preventDefault();MF.Toast('ok','Gracias por suscribirte. Te escribiremos pronto con novedades.');this.reset();">
+                        <label class="visually-hidden" for="subscribeEmail">Correo electronico</label>
+                        <input type="email" id="subscribeEmail" class="form-control" placeholder="Tu correo electronico" required>
+                        <button class="btn btn-success text-nowrap" type="submit">Suscribirme</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="border-top border-secondary py-3">
+                <p class="small mb-1">&copy; 2026 Mascotas Felices. Todos los derechos reservados.</p>
+                <p class="mf-credits mb-0">Proyecto academico. Imagenes de perros y gatos obtenidas de las fuentes abiertas dog.ceo y thecatapi.com. Estructura visual basada en el template HTML de TemplateMo, adaptado y reescrito.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/jquery-1.11.0.min.js"></script>
+    <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/productos.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>

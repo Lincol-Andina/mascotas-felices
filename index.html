@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Mascotas Felices | Tienda de productos para perros y gatos</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Mascotas Felices: tienda de alimento, juguetes, accesorios e higiene para perros y gatos. Envio gratis en pedidos mayores a $60.00 MXN.">
+    <meta name="author" content="Mascotas Felices">
+
+    <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/templatemo.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap">
+</head>
+
+<body>
+    <a class="mf-skip-link" href="#mf-main">Ir al contenido principal</a>
+
+    <nav class="mf-topbar d-none d-lg-block">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center py-2">
+                <div class="small text-white-50">
+                    <i class="fas fa-envelope me-2"></i>hola@mascotasfelices.com
+                    <span class="mx-3">|</span>
+                    <i class="fas fa-phone me-2"></i>(55) 1234 5678
+                </div>
+                <div class="d-flex gap-3">
+                    <a href="#" class="text-white-50" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-white-50" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-white-50" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    <a href="#" class="text-white-50" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="navbar navbar-expand-lg mf-navbar sticky-top shadow-sm">
+        <div class="container">
+            <a class="mf-logo" href="index.html">
+                <span class="mf-logo-mark"><i class="fas fa-paw"></i></span>
+                Mascotas Felices
+            </a>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mf-nav" aria-controls="mf-nav" aria-expanded="false" aria-label="Abrir menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mf-nav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="shop.html">Tienda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
+                </ul>
+
+                <div class="d-flex align-items-center gap-2 py-3 py-lg-0">
+                    <form action="shop.html" method="get" class="d-lg-none w-100 me-2">
+                        <div class="input-group">
+                            <input type="search" name="q" class="form-control mf-form-control" placeholder="Buscar productos..." aria-label="Buscar productos">
+                            <button class="btn btn-success" type="submit" aria-label="Buscar"><i class="fas fa-search"></i></button>
+                        </div>
+                    </form>
+                    <button class="mf-icon-btn" type="button" data-bs-toggle="modal" data-bs-target="#mf-search" aria-label="Buscar">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <a class="mf-icon-btn" href="cart.html" aria-label="Ver carrito">
+                        <i class="fas fa-cart-arrow-down"></i>
+                        <span class="mf-cart-count" data-mf-cart-count>0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="modal fade" id="mf-search" tabindex="-1" aria-labelledby="mf-search-label" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content border-0" style="border-radius:18px">
+                <div class="modal-header border-0 pb-0">
+                    <h2 class="modal-title h5 fw-bold" id="mf-search-label">Buscar productos</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body mf-modal-search">
+                    <div class="input-group mb-3">
+                        <input type="search" class="form-control mf-form-control" id="mf-search-input" placeholder="Escribe el nombre de un producto...">
+                        <span class="input-group-text bg-success text-white"><i class="fas fa-search"></i></span>
+                    </div>
+                    <div class="mf-search-results" id="mf-search-results"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main id="mf-main">
+
+        <section class="mf-hero">
+            <div class="container">
+                <div class="row align-items-center py-5">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <span class="mf-eyebrow">Envio gratis desde $60.00</span>
+                        <h1 class="display-4 fw-bold">Todo lo que tu <span class="text-success">mascota</span> necesita</h1>
+                        <p class="mf-hero-sub my-3">Alimento, juguetes, accesorios e higiene seleccionados por veterinarios. Envio en 24 horas y devolucion gratuita durante 30 dias.</p>
+                        <div class="d-flex gap-2 flex-wrap">
+                            <a href="shop.html" class="btn btn-success btn-lg">Ver catalogo</a>
+                            <a href="#mf-destacados-seccion" class="btn btn-outline-mf btn-lg">Ofertas del mes</a>
+                        </div>
+                        <div class="d-flex gap-4 mt-4">
+                            <div><span class="fs-3 fw-bold text-success d-block">18</span><span class="small text-muted">productos</span></div>
+                            <div><span class="fs-3 fw-bold text-success d-block">6</span><span class="small text-muted">categorias</span></div>
+                            <div><span class="fs-3 fw-bold text-success d-block">4.6</span><span class="small text-muted">valoracion</span></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div id="mf-hero-carousel" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#mf-hero-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Diapositiva 1"></button>
+                                <button type="button" data-bs-target="#mf-hero-carousel" data-bs-slide-to="1" aria-label="Diapositiva 2"></button>
+                                <button type="button" data-bs-target="#mf-hero-carousel" data-bs-slide-to="2" aria-label="Diapositiva 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="assets/img/banner_mf_01.jpg" class="img-fluid rounded-4 shadow" alt="Perro feliz con su correa nueva" width="900" height="500">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/img/banner_mf_02.jpg" class="img-fluid rounded-4 shadow" alt="Gato descansando en su cama" width="900" height="500">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/img/banner_mf_03.jpg" class="img-fluid rounded-4 shadow" alt="Mascotas esperando su comida" width="900" height="500">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#mf-hero-carousel" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Anterior</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#mf-hero-carousel" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Siguiente</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container py-5">
+            <div class="row text-center mb-5">
+                <div class="col-lg-7 m-auto">
+                    <span class="mf-eyebrow">Categorias</span>
+                    <h2 class="mf-section-title">Compra por tipo de producto</h2>
+                    <div class="mf-divider"></div>
+                    <p class="text-muted mb-0">Cada categoria esta pensada segun la etapa de vida y el cuidado que necesita tu mascota.</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-12 col-md-4">
+                    <a class="mf-cat-card d-block text-decoration-none" href="shop.html?cat=perros">
+                        <img src="assets/img/prod_01.jpg" alt="Productos para perros" width="150" height="150" loading="lazy">
+                        <h3>Para perros</h3>
+                        <p>Correas, arneses, comederos y camas</p>
+                        <span class="btn btn-success btn-sm">Ver productos</span>
+                    </a>
+                </div>
+                <div class="col-12 col-md-4">
+                    <a class="mf-cat-card d-block text-decoration-none" href="shop.html?cat=gatos">
+                        <img src="assets/img/prod_19.jpg" alt="Productos para gatos" width="150" height="150" loading="lazy">
+                        <h3>Para gatos</h3>
+                        <p>Rascadores, transportines y bebederos</p>
+                        <span class="btn btn-success btn-sm">Ver productos</span>
+                    </a>
+                </div>
+                <div class="col-12 col-md-4">
+                    <a class="mf-cat-card d-block text-decoration-none" href="shop.html?cat=alimentos">
+                        <img src="assets/img/prod_04.jpg" alt="Alimento para mascotas" width="150" height="150" loading="lazy">
+                        <h3>Alimentos</h3>
+                        <p>Pienso, croquetas, comida humeda y snacks</p>
+                        <span class="btn btn-success btn-sm">Ver productos</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-light" id="mf-destacados-seccion">
+            <div class="container py-5">
+                <div class="row text-center mb-4">
+                    <div class="col-lg-7 m-auto">
+                        <span class="mf-eyebrow">Seleccion del equipo</span>
+                        <h2 class="mf-section-title">Productos destacados</h2>
+                        <div class="mf-divider"></div>
+                        <p class="text-muted mb-0">Los mas vendidos y mejor valorados por nuestros clientes este mes.</p>
+                    </div>
+                </div>
+                <div class="row" id="mf-destacados"></div>
+                <div class="text-center mt-3">
+                    <a href="shop.html" class="btn btn-outline-mf">Ver los 18 productos</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="container py-5">
+            <div class="row text-center mb-5">
+                <div class="col-lg-7 m-auto">
+                    <span class="mf-eyebrow">Por que comprarnos</span>
+                    <h2 class="mf-section-title">Un servicio pensado para tu mascota</h2>
+                    <div class="mf-divider"></div>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="mf-service-card text-center">
+                        <div class="mf-service-icon"><i class="fas fa-truck-fast"></i></div>
+                        <h3 class="h5 fw-bold">Envio en 24 horas</h3>
+                        <p class="text-muted mb-0 small">Despachamos el mismo dia si pides antes de las 14:00 horas.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="mf-service-card text-center">
+                        <div class="mf-service-icon"><i class="fas fa-rotate-left"></i></div>
+                        <h3 class="h5 fw-bold">30 dias para devolver</h3>
+                        <p class="text-muted mb-0 small">Si no le convence a tu mascota, te devolvemos el dinero.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="mf-service-card text-center">
+                        <div class="mf-service-icon"><i class="fas fa-user-md"></i></div>
+                        <h3 class="h5 fw-bold">Asesoria veterinaria</h3>
+                        <p class="text-muted mb-0 small">Resolvemos tus dudas sobre producto por WhatsApp de lunes a sabado.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="mf-service-card text-center">
+                        <div class="mf-service-icon"><i class="fas fa-shield-halved"></i></div>
+                        <h3 class="h5 fw-bold">Compra segura</h3>
+                        <p class="text-muted mb-0 small">Pago protegido y datos de tarjeta nunca almacenados.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container pb-5">
+            <div class="row text-center mb-4">
+                <div class="col-lg-7 m-auto">
+                    <span class="mf-eyebrow">Marcas</span>
+                    <h2 class="mf-section-title">Trabajamos con estas marcas</h2>
+                    <div class="mf-divider"></div>
+                </div>
+            </div>
+            <div class="row g-3">
+                <div class="col-6 col-md-3"><div class="mf-brand-pill">PetCare</div></div>
+                <div class="col-6 col-md-3"><div class="mf-brand-pill">NutriPet</div></div>
+                <div class="col-6 col-md-3"><div class="mf-brand-pill">Animalis</div></div>
+                <div class="col-6 col-md-3"><div class="mf-brand-pill">VetLine</div></div>
+                <div class="col-6 col-md-3"><div class="mf-brand-pill">Huella Feliz</div></div>
+                <div class="col-6 col-md-3"><div class="mf-brand-pill">PawsCo</div></div>
+                <div class="col-6 col-md-3"><div class="mf-brand-pill">FelizGato</div></div>
+                <div class="col-6 col-md-3"><div class="mf-brand-pill">NaturalCan</div></div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="mf-footer">
+        <div class="container">
+            <div class="row py-5">
+                <div class="col-md-4 mb-4">
+                    <h2 class="mf-footer-title mb-3">Mascotas Felices</h2>
+                    <p class="small">Tienda de productos para perros y gatos. Seleccionamos cada articulo con el criterio de quien tiene mascotas de verdad.</p>
+                    <ul class="list-unstyled mf-footer-link-list small">
+                        <li><i class="fas fa-location-dot me-2"></i>Av. de los Mascotes 142, Ciudad de Mexico</li>
+                        <li><i class="fas fa-phone me-2"></i><a href="tel:+525512345678">(55) 1234 5678</a></li>
+                        <li><i class="fas fa-envelope me-2"></i><a href="mailto:hola@mascotasfelices.com">hola@mascotasfelices.com</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h2 class="mf-footer-title mb-3">Categorias</h2>
+                    <ul class="list-unstyled mf-footer-link-list">
+                        <li><a class="text-decoration-none" href="shop.html?cat=perros">Perros</a></li>
+                        <li><a class="text-decoration-none" href="shop.html?cat=gatos">Gatos</a></li>
+                        <li><a class="text-decoration-none" href="shop.html?cat=alimentos">Alimentos</a></li>
+                        <li><a class="text-decoration-none" href="shop.html?cat=juguetes">Juguetes</a></li>
+                        <li><a class="text-decoration-none" href="shop.html?cat=accesorios">Accesorios</a></li>
+                        <li><a class="text-decoration-none" href="shop.html?cat=higiene">Higiene</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h2 class="mf-footer-title mb-3">Informacion</h2>
+                    <ul class="list-unstyled mf-footer-link-list">
+                        <li><a class="text-decoration-none" href="about.html">Sobre nosotros</a></li>
+                        <li><a class="text-decoration-none" href="cart.html">Mi carrito</a></li>
+                        <li><a class="text-decoration-none" href="contact.html">Contacto</a></li>
+                        <li><a class="text-decoration-none" href="shop.html?orden=precio-asc">Ofertas</a></li>
+                        <li><a class="text-decoration-none" href="contact.html#mf-form-contacto">Asesoria veterinaria</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row align-items-center pb-4">
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <div class="d-flex gap-2">
+                        <a href="#" class="mf-social" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="mf-social" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="mf-social" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" class="mf-social" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <form class="mf-subscribe d-flex gap-2" onsubmit="event.preventDefault();MF.Toast('ok','Gracias por suscribirte. Te escribiremos pronto con novedades.');this.reset();">
+                        <label class="visually-hidden" for="subscribeEmail">Correo electronico</label>
+                        <input type="email" id="subscribeEmail" class="form-control" placeholder="Tu correo electronico" required>
+                        <button class="btn btn-success text-nowrap" type="submit">Suscribirme</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="border-top border-secondary py-3">
+                <p class="small mb-1">&copy; 2026 Mascotas Felices. Todos los derechos reservados.</p>
+                <p class="mf-credits mb-0">Proyecto academico. Imagenes de perros y gatos obtenidas de las fuentes abiertas dog.ceo y thecatapi.com. Estructura visual basada en el template HTML de TemplateMo, adaptado y reescrito.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/jquery-1.11.0.min.js"></script>
+    <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/productos.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>
